@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "AVR",
+            "compilerPath": "/opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/bin/avr-gcc",
+            "compilerArgs": [
+                "-mmcu=atmega8535",
+                "-DF_CPU=8000000UL",
+                "-Os"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/Cellar/avr-gcc@9/*/avr/include"
+            ],
+            "defines": [
+                "__AVR_ATmega8535__",
+                "F_CPU=8000000UL"
+            ],
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "/opt/homebrew/Cellar/avr-gcc@9/*/avr/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 4
+}
