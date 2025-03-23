@@ -32,9 +32,11 @@ CFLAGS   = -Wall -Os -mmcu=$(MCU) -DF_CPU=$(F_CPU) -std=gnu99 \
            -MD -MP -MF $(DEP_DIR)/$(@F).d
 LDFLAGS  = -Wl,-Map=$(TARGET).map
 
-# === Programmer Config ===
-PROGRAMMER      = usbasp
-PROGRAMMER_ARGS = -c $(PROGRAMMER) -p $(MCU)
+# === Programmer Config for Arduino as ISP ===
+PROGRAMMER      = arduino
+PORT            = /dev/tty.usbmodem1101
+BAUD            = 19200
+PROGRAMMER_ARGS = -c $(PROGRAMMER) -p $(MCU) -P $(PORT) -b $(BAUD)
 
 # === Build Targets ===
 all: $(TARGET).hex
