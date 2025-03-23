@@ -179,4 +179,4 @@ turn_relays_for_direction();
 - Add decoupling caps near MCU
 - Store last state in EEPROM
 - Default state = Gate Closed
-- Note that the gate motors have built in endstops that prevent them from opening or closing too far.
+- Note that *my* gate motors have built in endstops that prevent them from opening or closing too far.
